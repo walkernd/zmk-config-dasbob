@@ -1,6 +1,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+
 #define CONFIG_WIRELESS 1
+
 / {
     behaviors {
         hm: homerow_mods {
@@ -72,10 +74,10 @@
 
         Misc {
             bindings = <
-&trans  &trans  &trans  &kp LS(Z)  &mkp LCLK  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &kp LS(Y)  &mkp RCLK  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans
-                &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &kp LS(Z)  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp LS(Y)  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans     &trans  &trans  &trans  &trans
             >;
         };
     };
