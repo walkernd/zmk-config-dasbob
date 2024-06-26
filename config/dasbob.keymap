@@ -54,10 +54,10 @@
 
         Num {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4    &kp N5          &kp NUMBER_6     &kp N7     &kp N8             &kp N9     &kp N0
-&kp F1        &kp F2        &kp F3        &kp F4          &kp F5          &kp EXCLAMATION  &kp EQUAL  &kp UP_ARROW       &kp F9     &kp F10
-&kp F6        &kp F7        &kp F8        &kp F9          &kp F10         &kp AT_SIGN      &kp LEFT   &kp DOWN_ARROW     &kp RIGHT  &trans
-                            &trans        &sk LEFT_SHIFT  &kp LEFT_SHIFT  &kp ENTER        &kp SPACE  &kp RIGHT_CONTROL
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4          &kp N5                 &kp NUMBER_6     &kp N7     &kp N8             &kp N9     &kp N0
+&none         &none         &none         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCLAMATION  &kp EQUAL  &kp UP_ARROW       &none      &none
+&none         &none         &none         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT_SIGN      &kp LEFT   &kp DOWN_ARROW     &kp RIGHT  &trans
+                            &to 0         &sk LEFT_SHIFT        &kp BACKSPACE          &kp ENTER        &kp SPACE  &kp RIGHT_CONTROL
             >;
         };
 
