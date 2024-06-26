@@ -60,6 +60,11 @@
             bindings = <&to 0>;
             key-positions = <20 21>;
         };
+
+        layer-2 {
+            bindings = <&to 2>;
+            key-positions = <28 29>;
+        };
     };
 
     keymap {
