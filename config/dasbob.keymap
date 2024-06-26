@@ -55,6 +55,11 @@
             bindings = <&kp DELETE>;
             key-positions = <3 2>;
         };
+
+        layer-zero {
+            bindings = <&to 0>;
+            key-positions = <20 21>;
+        };
     };
 
     keymap {
@@ -64,18 +69,18 @@
 
         Base {
             bindings = <
-&kp Q  &kp W  &kp F  &kp P            &kp G          &kp J      &kp L      &kp U              &kp P    &kp SEMI
-&kp A  &kp R  &kp S  &kp T            &kp D          &kp H      &kp N      &kp E              &kp I    &kp O
-&kp Z  &kp X  &kp C  &kp V            &kp B          &kp K      &kp M      &kp COMMA          &kp DOT  &kp SLASH
-              &mo 1  &sk RIGHT_SHIFT  &kp BACKSPACE  &kp ENTER  &kp SPACE  &kp RIGHT_CONTROL
+&kp Q           &kp W  &kp F  &kp P            &kp G          &kp J      &kp L      &kp U              &kp P    &kp SEMI
+&mt LEFT_GUI A  &kp R  &kp S  &kp T            &kp D          &kp H      &kp N      &kp E              &kp I    &kp O
+&kp Z           &kp X  &kp C  &kp V            &kp B          &kp K      &kp M      &kp COMMA          &kp DOT  &kp SLASH
+                       &mo 1  &sk RIGHT_SHIFT  &kp BACKSPACE  &kp ENTER  &kp SPACE  &kp RIGHT_CONTROL
             >;
         };
 
         Num {
             bindings = <
 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4          &kp N5                 &kp NUMBER_6     &kp N7     &kp N8             &kp N9     &kp N0
-&none         &none         &none         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCLAMATION  &kp EQUAL  &kp UP_ARROW       &none      &none
-&none         &none         &none         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT_SIGN      &kp LEFT   &kp DOWN_ARROW     &kp RIGHT  &trans
+&none         &none         &none         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCLAMATION  &kp EQUAL  &kp UP_ARROW       &none      &kp SINGLE_QUOTE
+&kp TILDE     &none         &none         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT_SIGN      &kp LEFT   &kp DOWN_ARROW     &kp RIGHT  &kp MINUS
                             &to 0         &sk LEFT_SHIFT        &kp BACKSPACE          &kp ENTER        &kp SPACE  &kp RIGHT_CONTROL
             >;
         };
