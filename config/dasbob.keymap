@@ -23,7 +23,9 @@
                 <&macro_press>,
                 <&kp LEFT_CONTROL &kp LEFT_ALT>,
                 <&macro_tap>,
-                <&kp W>;
+                <&kp W>,
+                <&macro_release>,
+                <&kp RIGHT_CONTROL &kp LEFT_ALT>;
 
             label = "MOUSE_UP";
         };
@@ -31,22 +33,71 @@
         mouse_down: mouse_down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_release>,
+                <&kp RIGHT_CONTROL &kp LEFT_ALT>;
+
             label = "MOUSE_DOWN";
         };
 
         mouse_left: mouse_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp A>,
+                <&macro_release>,
+                <&kp RIGHT_CONTROL &kp LEFT_ALT>;
+
             label = "MOUSE_LEFT";
         };
 
         mouse_right: mouse_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp D>,
+                <&macro_release>,
+                <&kp RIGHT_CONTROL &kp LEFT_ALT>;
+
             label = "MOUSE_RIGHT";
+        };
+
+        scroll_up: scroll_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp SEMI>,
+                <&macro_release>,
+                <&kp RIGHT_CONTROL &kp LEFT_ALT>;
+
+            label = "SCROLL_UP";
+        };
+
+        scroll_down: scroll_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp SLASH>,
+                <&macro_release>,
+                <&kp RIGHT_CONTROL &kp LEFT_ALT>;
+
+            label = "SCROLL_DOWN";
         };
     };
 
@@ -74,8 +125,13 @@
         };
 
         layer-2 {
-            bindings = <&to 2>;
+            bindings = <&mo 2>;
             key-positions = <25 26>;
+        };
+
+        control {
+            bindings = <&kp LEFT_CONTROL>;
+            key-positions = <23 24>;
         };
     };
 
@@ -98,16 +154,16 @@
 &kp NUMBER_1          &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4          &kp N5                 &kp NUMBER_6     &kp N7     &kp N8             &kp N9     &kp N0
 &kp NON_US_BACKSLASH  &none         &key_repeat   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCLAMATION  &kp EQUAL  &kp UP_ARROW       &none      &kp SINGLE_QUOTE
 &kp TILDE             &none         &none         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT_SIGN      &kp LEFT   &kp DOWN_ARROW     &kp RIGHT  &kp MINUS
-                                    &to 0         &sk LEFT_SHIFT        &kp BACKSPACE          &kp ENTER        &kp SPACE  &kp RIGHT_CONTROL
+                                    &none         &sk LEFT_SHIFT        &kp BACKSPACE          &kp ENTER        &kp SPACE  &kp RIGHT_CONTROL
             >;
         };
 
         Sym {
             bindings = <
-&none              &none  &none   &none   &none      &kp F1   &kp F2   &kp F3   &kp F4   &kp F5
-&kp K_VOLUME_UP    &none  &none   &none   &none      &kp F6   &kp F7   &kp F8   &kp F9   &kp F10
-&kp K_VOLUME_DOWN  &none  &none   &none   &none      &kp F11  &kp F12  &kp F13  &kp F14  &kp F15
-                          &trans  &trans  &kp LSHFT  &trans   &trans   &trans
+&none              &none        &none        &none         &none         &kp F1   &kp F2   &kp F3   &kp F4   &kp F5
+&kp K_VOLUME_UP    &none        &mouse_up    &none         &scroll_up    &kp F6   &kp F7   &kp F8   &kp F9   &kp F10
+&kp K_VOLUME_DOWN  &mouse_left  &mouse_down  &mouse_right  &scroll_down  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15
+                                &trans       &trans        &kp LSHFT     &trans   &trans   &trans
             >;
         };
 
