@@ -99,6 +99,20 @@
 
             label = "SCROLL_DOWN";
         };
+
+        ctrl_bksp: ctrl_bksp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp BACKSPACE>,
+                <&macro_release>,
+                <&kp RIGHT_CONTROL>;
+
+            label = "CTRL_BKSP";
+        };
     };
 
     combos {
@@ -114,8 +128,8 @@
             key-positions = <10 11>;
         };
 
-        del {
-            bindings = <&kp DELETE>;
+        ctl_bksp {
+            bindings = <&ctrl_bksp>;
             key-positions = <3 2>;
         };
 
@@ -132,6 +146,11 @@
         control {
             bindings = <&kp LEFT_CONTROL>;
             key-positions = <23 24>;
+        };
+
+        Del {
+            bindings = <&kp DELETE>;
+            key-positions = <1 2 3>;
         };
     };
 
