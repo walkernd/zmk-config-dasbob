@@ -4,4 +4,6 @@ jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     with:
+      # We define the board and variant separately here
+      # so the revision check doesn't see the '@' symbol
       build_matrix_path: "build.yaml"
