@@ -13,9 +13,7 @@
 #
 ---
 include:
-  - board: nice_nano
-    board_variant: zmk
+  - board: nice_nano@zmk
     shield: dasbob_left
-  - board: nice_nano
-    board_variant: zmk
+  - board: nice_nano@zmk
     shield: dasbob_right
